@@ -1,5 +1,10 @@
 import os
+os.environ["OTEL_SDK_DISABLED"] = "true"
+os.environ["CREWAI_DISABLE_TELEMETRY"] = "true"
+
 import streamlit as st
+from crewai import Agent, Task, Crew, LLM
+
 from crewai import Agent, Task, Crew, LLM
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
